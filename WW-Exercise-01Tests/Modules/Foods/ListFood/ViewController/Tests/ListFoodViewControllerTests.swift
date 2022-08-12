@@ -33,8 +33,8 @@ class ListFoodViewControllerTests: XCTestCase {
         sut.viewDidLoad()
         // Then
         XCTAssertTrue(presenter.isFetchFoodsCalled, "Fetch food func not called")
-        XCTAssertNotNil(sut.mainView.collectionView.delegate, "Not set delegate for UITableView")
-        XCTAssertNotNil(sut.mainView.collectionView.dataSource, "Not set dataSource for UITableView")
+        XCTAssertNotNil(sut.mainView.collectionView.delegate, "Not set delegate for UITCollectionView")
+        XCTAssertNotNil(sut.mainView.collectionView.dataSource, "Not set dataSource for UITCollectionView")
     }
     
     func test_showError() {
