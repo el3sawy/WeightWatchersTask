@@ -32,6 +32,4 @@ enum MockRequest: BaseURLRequest {
             return nil
         }
     }
-    
-    
 }
