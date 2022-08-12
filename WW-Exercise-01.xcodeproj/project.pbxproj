@@ -52,7 +52,6 @@
 		92C2ABFB289886FA00492721 /* FoodConfiguratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2ABFA289886FA00492721 /* FoodConfiguratorTest.swift */; };
 		92C2ABFE2898878C00492721 /* FoodRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2ABFD2898878C00492721 /* FoodRequestTest.swift */; };
 		B81FCB9E1D36AD1F003CE14D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FCB9D1D36AD1F003CE14D /* AppDelegate.swift */; };
-		B81FCBA01D36AD1F003CE14D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FCB9F1D36AD1F003CE14D /* ViewController.swift */; };
 		B81FCBA51D36AD1F003CE14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81FCBA41D36AD1F003CE14D /* Assets.xcassets */; };
 		B81FCBBE1D36AD1F003CE14D /* WW_Exercise_01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FCBBD1D36AD1F003CE14D /* WW_Exercise_01UITests.swift */; };
 		B81FCBCD1D36E016003CE14D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81FCBA61D36AD1F003CE14D /* LaunchScreen.storyboard */; };
@@ -125,7 +124,6 @@
 		92C2ABFD2898878C00492721 /* FoodRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRequestTest.swift; sourceTree = "<group>"; };
 		B81FCB9A1D36AD1F003CE14D /* WW-Exercise-01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WW-Exercise-01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81FCB9D1D36AD1F003CE14D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B81FCB9F1D36AD1F003CE14D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B81FCBA41D36AD1F003CE14D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B81FCBA71D36AD1F003CE14D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B81FCBA91D36AD1F003CE14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 				B81FCBA91D36AD1F003CE14D /* Info.plist */,
 				B81FCBA61D36AD1F003CE14D /* LaunchScreen.storyboard */,
 				B81FCBA41D36AD1F003CE14D /* Assets.xcassets */,
-				B81FCB9F1D36AD1F003CE14D /* ViewController.swift */,
 				B81FCB9D1D36AD1F003CE14D /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -788,13 +785,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-WW-Exercise-01/Pods-WW-Exercise-01-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -847,7 +842,6 @@
 				92C2AAE42897F67000492721 /* HTTPMethod.swift in Sources */,
 				92C2ABAE28983CE600492721 /* FoodRepository.swift in Sources */,
 				92C2ABC12898427C00492721 /* FoodUIModel.swift in Sources */,
-				B81FCBA01D36AD1F003CE14D /* ViewController.swift in Sources */,
 				92C2ABBE28983D2300492721 /* UIStackView+Init.swift in Sources */,
 				92C2ABBF28983D2300492721 /* UILabel+Init.swift in Sources */,
 				92C2AAEB2897F95D00492721 /* AppResponse.swift in Sources */,
