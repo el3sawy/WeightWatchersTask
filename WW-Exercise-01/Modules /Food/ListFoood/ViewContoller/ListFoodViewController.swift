@@ -23,7 +23,7 @@ class ListFoodViewController: UIViewController, PresentableAlert {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupCollectionView()
         presenter?.fetchFoods()
     }
     
@@ -37,7 +37,7 @@ class ListFoodViewController: UIViewController, PresentableAlert {
     }
     
     // MARK: - Functions
-    private func setupTableView() {
+    private func setupCollectionView() {
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
     }
