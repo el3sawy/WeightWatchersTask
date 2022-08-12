@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.5.0)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - PureLayout (3.1.4)
+  - SwiftLint (0.45.1)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - PureLayout (= 3.1.4)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - PureLayout
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
+
+PODFILE CHECKSUM: f7fb4a33c166403c597e3bc26da71929d5eb8f3d
+
+COCOAPODS: 1.11.3
