@@ -52,23 +52,4 @@ extension Network: NetworkProtocol {
             }
         }.resume()
     }
-    
-    func fetch<T: Codable>(url: BaseURLRequest, responseType: T.Type = T.self) async -> AppResponse<T> {
-        guard let request = url.urlRequest() else {
-            return .error(.invalidURL)
-        }
-        
-        return await withCheckedContinuation { continuation in
-            session.dataTask(with: request) { data, _, error1 in
-                if let responseError = error1 { // Response error
-                    let responseError1 = NetworkResponseError.filterError(error: responseError)
-                    DispatchQueue.main.async { continuation.resume(returning: AppResponse.error(responseError1))}
-                    
-                } else if let responseData = data { // Success response
-                    let result: AppResponse<T> = JsonParser.handleJsonCoder(data: responseData)
-                    DispatchQueue.main.async { continuation.resume(returning: result) }
-                }
-            }.resume()
-        }
-    }
 }
