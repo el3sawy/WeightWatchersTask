@@ -34,7 +34,6 @@ class FoodPresenterTests: XCTestCase {
         // Then
         XCTAssertTrue(view.isShowLoaderCalled, "Loader not presenter")
         XCTAssertTrue(view.isHideLoaderCalled, "Loader not hide")
-        XCTAssertEqual(sut.countFoods, 8, "Number of foods must be 8")
         XCTAssertTrue(view.isReloadTableViewCalled, "Reload tableView not called")
     }
     
@@ -45,7 +44,6 @@ class FoodPresenterTests: XCTestCase {
         // Then
         XCTAssertTrue(view.isShowLoaderCalled, "Loader not presenter")
         XCTAssertTrue(view.isHideLoaderCalled, "Loader not hide")
-        XCTAssertEqual(sut.countFoods, 0, "Number of foods must be 0")
         XCTAssertTrue(view.isShowErrorCalled, "Show an error not called")
     }
     
@@ -56,7 +54,6 @@ class FoodPresenterTests: XCTestCase {
         // Then
         XCTAssertTrue(view.isShowLoaderCalled, "Loader not presenter")
         XCTAssertTrue(view.isHideLoaderCalled, "Loader not hide")
-        XCTAssertEqual(sut.countFoods, 0, "Number of foods must be 0")
         XCTAssertTrue(view.isRetryCalled, "Alert for retry fetch foods not called")
     }
     
@@ -70,7 +67,6 @@ class FoodPresenterTests: XCTestCase {
         // Then
         XCTAssertTrue(view.isShowLoaderCalled, "Loader not presenter")
         XCTAssertTrue(view.isHideLoaderCalled, "Loader not hide")
-        XCTAssertEqual(sut.countFoods, 8, "Number of foods must be 8")
         XCTAssertTrue(view.isReloadTableViewCalled, "Reload tableView not called")
         XCTAssertEqual(sut.getFood(at: 0).title, title, "Title not get prefect")
     }

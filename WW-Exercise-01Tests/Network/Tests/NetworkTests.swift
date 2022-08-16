@@ -104,15 +104,4 @@ class NetworkTests: XCTestCase {
         }
         waitForExpectations(timeout: 1, handler: nil)
     }
-    
-    func test_request_notValidURL_fail(){
-        sut.request(url: MockRequest.invalidURL) { (response: AppResponse<[FoodModel]>) in
-            switch response {
-            case .success(_):
-                XCTFail("Error")
-            case .error(let error):
-                XCTAssertEqual(error, NetworkError.invalidURL, "There is error for offline connection")
-            }
-        }
-    }
 }

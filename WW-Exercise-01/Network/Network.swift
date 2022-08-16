@@ -17,18 +17,30 @@ protocol NetworkProtocol {
 class Network {
     
     // MARK: - Properties
+    private let responseError: ResponseErrorProtocol
+    private let parser: JsonParserProtocol
     private var session: URLSession
     #if TESTING
     static var shared = Network()
     
     // MARK: - Init
-    init(session: URLSession = URLSession(configuration: .default)) {
+    init(session: URLSession = URLSession(configuration: .default),
+         responseError: ResponseErrorProtocol = NetworkResponseError(),
+         parser: JsonParserProtocol = JsonParser()) {
+        
         self.session = session
+        self.responseError = responseError
+        self.parser = parser
     }
     #else
     static let shared = Network()
-    private init(session: URLSession = URLSession(configuration: .default)) {
+    private init(session: URLSession = URLSession(configuration: .default),
+                 responseError: ResponseErrorProtocol = NetworkResponseError(),
+                 parser: JsonParserProtocol = JsonParser()) {
+        
         self.session = session
+        self.responseError = responseError
+        self.parser = parser
     }
     #endif
 }
@@ -36,18 +48,17 @@ class Network {
 extension Network: NetworkProtocol {
     
     func request <T: Codable>(url: BaseURLRequest, completionHandler: @escaping Handler<T>) {
-        guard let request = url.urlRequest() else {
-            return completionHandler(.error(.invalidURL))
-        }
+        let request = url.urlRequest()
         
-        session.dataTask(with: request) { data, _, error in
+        session.dataTask(with: request) { [weak self] data, _, error in
+            guard let self = self else { return }
             
             if let responseError = error { // Response error
-                let responseError = NetworkResponseError.filterError(error: responseError)
-                    DispatchQueue.main.async { completionHandler(AppResponse.error(responseError))}
+                let responseError = self.responseError.filter(error: responseError)
+                DispatchQueue.main.async { completionHandler(AppResponse.error(responseError))}
                 
             } else if let responseData = data { // Success response
-                let result: AppResponse<T> = JsonParser.handleJsonCoder(data: responseData)
+                let result: AppResponse<T> = self.parser.parse(data: responseData)
                 DispatchQueue.main.async { completionHandler(result) }
             }
         }.resume()

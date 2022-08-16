@@ -13,7 +13,7 @@ extension UIView {
     @discardableResult
     func leadingAnchor(anchor: NSLayoutXAxisAnchor, distance: CGFloat) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let const = leadingAnchor.constraint(equalTo: anchor ,constant: distance)
+        let const = leadingAnchor.constraint(equalTo: anchor, constant: distance)
         const.isActive = true
         return const
     }
@@ -45,7 +45,7 @@ extension UIView {
     @discardableResult
     func centerX(anchor: NSLayoutXAxisAnchor, distance: CGFloat = 0) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let const = centerXAnchor.constraint(equalTo: anchor ,constant: distance)
+        let const = centerXAnchor.constraint(equalTo: anchor, constant: distance)
         const.isActive = true
         return const
     }
@@ -53,7 +53,7 @@ extension UIView {
     @discardableResult
     func centerY(anchor: NSLayoutYAxisAnchor, distance: CGFloat = 0) -> NSLayoutConstraint {
         translatesAutoresizingMaskIntoConstraints = false
-        let const = centerYAnchor.constraint(equalTo: anchor ,constant: distance)
+        let const = centerYAnchor.constraint(equalTo: anchor, constant: distance)
         const.isActive = true
         return const
     }

@@ -8,9 +8,12 @@
 
 import Foundation
 
-enum NetworkResponseError {
-    
-   static func filterError(error: Error) -> NetworkError {
+protocol ResponseErrorProtocol {
+    func filter(error: Error) -> NetworkError
+}
+
+struct NetworkResponseError: ResponseErrorProtocol {
+    func filter(error: Error) -> NetworkError {
         if let error =  error as NSError?, error.code == -1009 {
             return .noInternet
         } else {

@@ -11,7 +11,6 @@ import Foundation
 protocol ListFoodPresenterProtocol {
     func fetchFoods()
     func getFood(at index: Int) -> FoodUIModel
-    var countFoods: Int { get }
 }
 
 class ListFoodPresenter {
@@ -34,7 +33,7 @@ class ListFoodPresenter {
             
         case .success(let value):
             self.foods = handleSuccessResponse(values: value)
-            view?.reloadTableView()
+            view?.reloadCollectionView(with: foods)
         case .error(let error):
             handleError(error)
         }
@@ -58,9 +57,6 @@ class ListFoodPresenter {
 }
 
 extension ListFoodPresenter: ListFoodPresenterProtocol {
-    var countFoods: Int {
-        foods.count
-    }
     
     func fetchFoods() {
         view?.showLoader()

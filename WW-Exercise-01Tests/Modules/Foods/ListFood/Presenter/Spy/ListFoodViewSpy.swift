@@ -20,7 +20,7 @@ class ListFoodViewSpy {
 
 // MARK: - Spy Functions
 extension ListFoodViewSpy: ListFoodViewProtocol {
-    func reloadTableView() {
+    func reloadCollectionView(with foods: [FoodUIModel]) {
         isReloadTableViewCalled.toggle()
     }
     

@@ -21,7 +21,7 @@ class FoodRepositoryMock {
     }
     
     func simulateFailResponse() {
-        let error = NetworkError.invalidURL
+        let error = NetworkError.canNotDecode
         let failResponse = AppResponse<[FoodModel]>.error(error)
         completion?(failResponse)
     }

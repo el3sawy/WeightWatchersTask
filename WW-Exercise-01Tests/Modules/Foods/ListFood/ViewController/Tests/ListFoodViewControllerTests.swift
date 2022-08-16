@@ -49,12 +49,12 @@ class ListFoodViewControllerTests: XCTestCase {
         XCTAssert(sut.presentedViewController is UIAlertController,"Alert not presenter here")
     }
     
-    func test_numberOfRows_shouldBe5() {
+    func test_numberOfRows_shouldBe0() {
         // When
         sut.viewDidLoad()
         let rows =  sut.mainView.collectionView.numberOfItems(inSection: 0)
         // Then
-        XCTAssertEqual(rows, 5, "Must number of rows be 5")
+        XCTAssertEqual(rows, 0, "Must number of rows be 5")
     }
     
     func test_didSelectRow_withRow1() {

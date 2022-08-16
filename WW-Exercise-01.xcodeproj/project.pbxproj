@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9289FDAE28AC2ED900C58B55 /* ListFoodDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289FDAD28AC2ED900C58B55 /* ListFoodDataSource.swift */; };
+		9289FDB028AC305000C58B55 /* ListFoodDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289FDAF28AC305000C58B55 /* ListFoodDelegate.swift */; };
 		92C2AAE12897F55E00492721 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AAE02897F55E00492721 /* Network.swift */; };
 		92C2AAE42897F67000492721 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AAE32897F67000492721 /* HTTPMethod.swift */; };
 		92C2AAE62897F69200492721 /* BaseURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AAE52897F69200492721 /* BaseURLRequest.swift */; };
@@ -19,7 +21,6 @@
 		92C2AAF8289804F200492721 /* URLStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AAF7289804F200492721 /* URLStubs.swift */; };
 		92C2AAFA2898052700492721 /* FoodStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AAF92898052700492721 /* FoodStubs.swift */; };
 		92C2AAFE2898064400492721 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AAFD2898064400492721 /* NetworkTests.swift */; };
-		92C2AB0328980F7400492721 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AB0228980F7400492721 /* MockRequest.swift */; };
 		92C2ABAC28983CE600492721 /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AB9C28983CE500492721 /* BaseViewCell.swift */; };
 		92C2ABAD28983CE600492721 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2AB9D28983CE500492721 /* BaseView.swift */; };
 		92C2ABAE28983CE600492721 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2ABA028983CE500492721 /* FoodRepository.swift */; };
@@ -78,6 +79,8 @@
 /* Begin PBXFileReference section */
 		0F1C7C08BD3930EA34D7ACB6 /* Pods_WW_Exercise_01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WW_Exercise_01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40455304F8540114C20573A5 /* Pods-WW-Exercise-01.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WW-Exercise-01.testing.xcconfig"; path = "Pods/Target Support Files/Pods-WW-Exercise-01/Pods-WW-Exercise-01.testing.xcconfig"; sourceTree = "<group>"; };
+		9289FDAD28AC2ED900C58B55 /* ListFoodDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodDataSource.swift; sourceTree = "<group>"; };
+		9289FDAF28AC305000C58B55 /* ListFoodDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodDelegate.swift; sourceTree = "<group>"; };
 		92C2AAE02897F55E00492721 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		92C2AAE32897F67000492721 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		92C2AAE52897F69200492721 /* BaseURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLRequest.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		92C2AAF7289804F200492721 /* URLStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStubs.swift; sourceTree = "<group>"; };
 		92C2AAF92898052700492721 /* FoodStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStubs.swift; sourceTree = "<group>"; };
 		92C2AAFD2898064400492721 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
-		92C2AB0228980F7400492721 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
 		92C2AB9C28983CE500492721 /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
 		92C2AB9D28983CE500492721 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		92C2ABA028983CE500492721 /* FoodRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
@@ -243,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				92C2AAF42898039600492721 /* MockURLProtocol.swift */,
-				92C2AB0228980F7400492721 /* MockRequest.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -316,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				92C2ABA528983CE500492721 /* ListFoodViewController.swift */,
+				9289FDAF28AC305000C58B55 /* ListFoodDelegate.swift */,
+				9289FDAD28AC2ED900C58B55 /* ListFoodDataSource.swift */,
 			);
 			path = ViewContoller;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				92C2AAE42897F67000492721 /* HTTPMethod.swift in Sources */,
 				92C2ABAE28983CE600492721 /* FoodRepository.swift in Sources */,
 				92C2ABC12898427C00492721 /* FoodUIModel.swift in Sources */,
+				9289FDAE28AC2ED900C58B55 /* ListFoodDataSource.swift in Sources */,
 				92C2ABBE28983D2300492721 /* UIStackView+Init.swift in Sources */,
 				92C2ABBF28983D2300492721 /* UILabel+Init.swift in Sources */,
 				92C2AAEB2897F95D00492721 /* AppResponse.swift in Sources */,
@@ -850,6 +854,7 @@
 				92C2ABC32898431C00492721 /* UIImageView+Loader.swift in Sources */,
 				92C2ABB128983CE600492721 /* ListFoodTableViewCell.swift in Sources */,
 				92C2ABBD28983D2300492721 /* View+Constrains.swift in Sources */,
+				9289FDB028AC305000C58B55 /* ListFoodDelegate.swift in Sources */,
 				92C2ABCB28984BD800492721 /* FoodConfigurator.swift in Sources */,
 				92C2AAF22897FEA200492721 /* FoodModel.swift in Sources */,
 				92C2AAE62897F69200492721 /* BaseURLRequest.swift in Sources */,
@@ -881,7 +886,6 @@
 				92C2ABD128985B1D00492721 /* NetworkSpy.swift in Sources */,
 				92C2AAF52898039600492721 /* MockURLProtocol.swift in Sources */,
 				92C2ABFB289886FA00492721 /* FoodConfiguratorTest.swift in Sources */,
-				92C2AB0328980F7400492721 /* MockRequest.swift in Sources */,
 				92C2ABE428985EAD00492721 /* FoodPresenterTests.swift in Sources */,
 				92C2ABD428985BB400492721 /* FoodRepositoryTests.swift in Sources */,
 				92C2ABE728986E1300492721 /* ListFoodViewSpy.swift in Sources */,

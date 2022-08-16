@@ -8,9 +8,12 @@
 
 import Foundation
 
-enum JsonParser {
-    
-    static func handleJsonCoder<T: Codable>(data: Data)-> AppResponse<T> {
+protocol JsonParserProtocol {
+    func parse<T: Codable>(data: Data)-> AppResponse<T>
+}
+
+struct JsonParser: JsonParserProtocol {
+    func parse<T: Codable>(data: Data)-> AppResponse<T> {
         do {
             let model = try JSONDecoder().decode(T.self, from: data)
             return .success(model)

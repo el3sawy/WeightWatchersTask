@@ -16,7 +16,6 @@ enum AppResponse <T> {
 enum NetworkError: Equatable, LocalizedError {
     case canNotDecode
     case noInternet
-    case invalidURL
     case error(String)
     
     var description: String {
@@ -27,8 +26,6 @@ enum NetworkError: Equatable, LocalizedError {
             return "No internet connection available please check your internet"
         case let .error(custom):
             return custom
-        case .invalidURL:
-            return "Invalid URL check your path please"
         }
     }
     
